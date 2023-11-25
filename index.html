@@ -3,45 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>for loop</title>
     <style>
         body{
             display: flex;
             justify-content: center;
             align-items: center;
+            background-color: black;
             height: 100vh;
-            background-color: brown;
         }
-        .game{
-            width: 600px;
-            padding: 30px;
+        .fact{
+            border-radius: 25px;
             background-color: #fff;
-        }
-        .game img{
-            width: 29%;
-            margin-right: 23px;
-            cursor: pointer;
+            padding: 20px;
+            width: 500px;
         }
     </style>
 </head>
 <body>
-    <div class="game">
-        <div class="point">
-            <p class="onoo">You:0</p>
-            <p class="cOnoo">computer:0</p>
-        </div>
-        <div class="choice">
-            <img src="367990933_273889695605811_4599245389833998410_n.jpg" alt="" onclick="play('paper')">
-            <img src="368509955_301922382682458_7861562073025132105_n.jpg" alt="" onclick="play('scissors')">
-            <img src="377242156_300760842921850_7853362843754357901_n.jpg" alt="" onclick="play('rock')">
-        </div>
-        <div class="result">
-            <p class="player">Your choice:</p> 
-            <p class="computer">computer choice:</p>
-            <p class="winner">result:</p>
-        </div>
+    <div class="fact">
+        <input type="number">
+        <button onclick="clac()">calculate</button>
+        <p class="result">result:0</p>
     </div>
-    <button class="start" onclick="restart()">restart</button>
     <script src="app.js"></script>
 </body>
 </html>

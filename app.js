@@ -1,67 +1,52 @@
-//define
-var player = document.querySelector('.player');
-var computer = document.querySelector('.computer')
-var winner = document.querySelector('.winner');
-var random;
-var cpoint = document.querySelector('.cOnoo')
-var point = document.querySelector('.onoo')
-var cPoint =1;
-var start = document.getElementsByTagName('button')[0]
-var pPoint =1;
-var computerChoice;
-//check
-console.log(player);
-console.log(computer);
-console.log(winner);
-// uildel
-function play(playerChoice){
-    if(playerChoice=="paper"){
-        player.innerText = "Your choice : Paper"
-    }else if(playerChoice=="scissors"){
-        player.innerText = "Your choice : Sciccors"
-    }else if(playerChoice=="rock"){
-        player.innerText = "Your choice : Rock"
-    }
-    //computer choice -> random() - - > 0 ->paper, 1->sciccors, 2->rock
-    random = Math.floor(Math.random()*3);
-    console.log(random)
-    if(random==0){
-        computerChoice="paper"
-        computer.innerText = "computer choice : paper"
-    }else if(random==1){
-        computerChoice="scisccors"
-        computer.innerText = "computer choice : scisccors"
-    }else if(random==2){
-        computerChoice="rock"
-        computer.innerText = "computer choice : rock"
-    }
-    // winer -> playerchoice==paper computerchoice==rock
-    //rock  : scissors , scissors:paper
-    if ((playerChoice=="paper" && computerChoice=="rock") || 
-     (playerChoice=="scisccors" && computerChoice=="paper") || 
-    (playerChoice=="rock" && computerChoice=="scisccors")){
-        winner.innerText = "player wins!"
-        point.innerText = "You :"+ pPoint++
-    }else if((playerChoice=="paper" && computerChoice=="scissors") || 
-    (playerChoice=="scisccors" && computerChoice=="rock") || 
-   (playerChoice=="rock" && computerChoice=="paper")){
-       winner.innerText = "Computer wins!"
-       cpoint.innerText = "computer : " + cPoint++
-    }else{
-        winner.innerText = "tentssen"
+// for loop -> davtalt
+// ()-> dotor davtah nuhtsul
+//for(var i=ehleh_too; i<=tugsgul_too; i++/i--){
+// end davtah code
+//}
+for(var i=1;i<=10;i++){
+    console.log(i+".hello")
+}
+// i=1 -> 1<= -> true -> 1.hello i++ 2
+// i=2 -> 1<= -> true -> 1.hello i++ 3
+// i=4 -> 1<= -> true -> 1.hello i++ 5
+// i=11 -> 11<=10 -> false -> 1.hello i++ 2
+for(var r=10;r>=1;r--){
+    console.log(r)
+}
+for(var i=1;i<=20;i++){
+    if (i%2==0) {
+        console.log(i+":tegsh")
+    } else {
+        console.log(i+":sondgoi")
     }
 }
-function restart(){
-    pPoint=0;
-    cPoint=0;
-    player.innerText = "your choise :"
-    computer.innerText = "computer choise:"
-    winner.innerText = "result :"
-    cpoint.innerText = " computer:" + pPoint
-    point.innerText = "You:" + cPoint
+var niilber=0;
+for(var i=1;i<=10;i++){
+    niilber = niilber + i;
+    console.log(niilber);
 }
-
-
-
-
-
+var urjver=1
+for(var i=1;i<=10;i++){
+    urjver = urjver * i;
+    console.log(urjver)
+}
+var hurd; 
+for(var i=1;i<=10;i++){
+    hurd = 10 * i;
+    console.log(i +  " X 10 " + "=" + hurd);
+}
+var input =document.getElementsByTagName('input')[0];
+var result = document.querySelector(".result");
+var number = input.value
+var fact = 1;
+// check
+console.log(input)
+console.log(result)
+function clac(){
+    var number = input.value
+    for(var i=1; i<=number;i++){
+        fact=fact*i;
+    }
+    result.innerText = "result:" + fact
+    fact=1;
+}
